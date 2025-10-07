@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=4e8ac606" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84854725" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -172,6 +172,13 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">About Me</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="labs/index.html">Laboratory Activities</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="labs/lab1.html">Laboratory Task 1 - Data Analytics Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labs/lab2.html">Laboratory Task 2 - Neural Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labs/lab3.html">FeedForward Results</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="labs/lab4.html">Define Model</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="labs/lab6.html">Integrating CNN Model</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="exercises/index.html">Exercises</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -403,33 +410,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-build-files">Cleaning Build Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-portfolio">📖 Viewing the Portfolio</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-github-pages">Online (GitHub Pages)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-development">Local Development</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-to-github-pages">🔄 Publishing to GitHub Pages</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-setup">Initial Setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-updates">Publishing Updates</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-content">📝 Adding New Content</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-lab">Adding a New Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-exercise">Adding a New Exercise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-project">Adding a New Project</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customization">🎨 Customization</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-personal-information">Updating Personal Information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-styles">Customizing Styles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-logo">Adding a Logo</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">📂 Project Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">🛠️ Technologies Used</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-resources">📚 Learning Resources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">🤝 Contributing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">📄 License</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">📧 Contact</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-updates">🔄 Continuous Updates</a></li>
 </ul>
@@ -470,7 +453,7 @@ document.write(`
 <h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Clone the repository</strong>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/DLPortfolio.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://hyunkael.github.io/DLPortfolio
 <span class="nb">cd</span><span class="w"> </span>DLPortfolio
 </pre></div>
 </div>
@@ -513,152 +496,6 @@ venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </div>
 </section>
 </section>
-<section id="viewing-the-portfolio">
-<h2>📖 Viewing the Portfolio<a class="headerlink" href="#viewing-the-portfolio" title="Link to this heading">#</a></h2>
-<section id="online-github-pages">
-<h3>Online (GitHub Pages)<a class="headerlink" href="#online-github-pages" title="Link to this heading">#</a></h3>
-<p>Visit the live portfolio at: <code class="docutils literal notranslate"><span class="pre">https://yourusername.github.io/DLPortfolio/</span></code></p>
-</section>
-<section id="local-development">
-<h3>Local Development<a class="headerlink" href="#local-development" title="Link to this heading">#</a></h3>
-<p>After building the book, you can serve it locally:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using Python&#39;s built-in server</span>
-<span class="nb">cd</span><span class="w"> </span>_build/html
-python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
-</pre></div>
-</div>
-<p>Then open <code class="docutils literal notranslate"><span class="pre">http://localhost:8000</span></code> in your browser.</p>
-</section>
-</section>
-<section id="publishing-to-github-pages">
-<h2>🔄 Publishing to GitHub Pages<a class="headerlink" href="#publishing-to-github-pages" title="Link to this heading">#</a></h2>
-<section id="initial-setup">
-<h3>Initial Setup<a class="headerlink" href="#initial-setup" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p><strong>Create a GitHub repository</strong> named <code class="docutils literal notranslate"><span class="pre">DLPortfolio</span></code></p></li>
-<li><p><strong>Initialize Git</strong> (if not already done):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>init
-git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: Jupyter Book portfolio&quot;</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>Add remote and push</strong>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/yourusername/DLPortfolio.git
-git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
-git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="publishing-updates">
-<h3>Publishing Updates<a class="headerlink" href="#publishing-updates" title="Link to this heading">#</a></h3>
-<p>Every time you update your portfolio:</p>
-<ol class="arabic">
-<li><p><strong>Build the book</strong>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.
-</pre></div>
-</div>
-</li>
-<li><p><strong>Deploy to GitHub Pages</strong>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
-</pre></div>
-</div>
-<p>This command:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-n</span></code>: Adds a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file (required for Jupyter Book)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>: Pushes to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code>: Forces the push (overwrites previous version)</p></li>
-</ul>
-</li>
-<li><p><strong>Enable GitHub Pages</strong>:</p>
-<ul class="simple">
-<li><p>Go to your repository on GitHub</p></li>
-<li><p>Navigate to Settings → Pages</p></li>
-<li><p>Under “Source”, select the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
-<li><p>Click Save</p></li>
-</ul>
-</li>
-</ol>
-<p>Your portfolio will be live at <code class="docutils literal notranslate"><span class="pre">https://yourusername.github.io/DLPortfolio/</span></code> within a few minutes!</p>
-</section>
-</section>
-<section id="adding-new-content">
-<h2>📝 Adding New Content<a class="headerlink" href="#adding-new-content" title="Link to this heading">#</a></h2>
-<section id="adding-a-new-lab">
-<h3>Adding a New Lab<a class="headerlink" href="#adding-a-new-lab" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p>Create a new notebook in the <code class="docutils literal notranslate"><span class="pre">labs/</span></code> directory (e.g., <code class="docutils literal notranslate"><span class="pre">lab2.ipynb</span></code>)</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> to include the new lab:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">labs/lab2</span>
-<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Laboratory Task 2 - Your Title</span>
-</pre></div>
-</div>
-</li>
-<li><p>Build and deploy the updated book</p></li>
-</ol>
-</section>
-<section id="adding-a-new-exercise">
-<h3>Adding a New Exercise<a class="headerlink" href="#adding-a-new-exercise" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Create a new file in the <code class="docutils literal notranslate"><span class="pre">exercises/</span></code> directory</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> to include it</p></li>
-<li><p>Build and deploy</p></li>
-</ol>
-</section>
-<section id="adding-a-new-project">
-<h3>Adding a New Project<a class="headerlink" href="#adding-a-new-project" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Create a new file in the <code class="docutils literal notranslate"><span class="pre">projects/</span></code> directory</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> to include it</p></li>
-<li><p>Build and deploy</p></li>
-</ol>
-</section>
-</section>
-<section id="customization">
-<h2>🎨 Customization<a class="headerlink" href="#customization" title="Link to this heading">#</a></h2>
-<section id="updating-personal-information">
-<h3>Updating Personal Information<a class="headerlink" href="#updating-personal-information" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p><strong>Edit <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></strong>:</p>
-<ul class="simple">
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">author</span></code> with your name</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">repository.url</span></code> with your GitHub repo URL</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">html.baseurl</span></code> with your GitHub Pages URL</p></li>
-</ul>
-</li>
-<li><p><strong>Edit <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> and <code class="docutils literal notranslate"><span class="pre">about.md</span></code></strong>:</p>
-<ul class="simple">
-<li><p>Add your personal information</p></li>
-<li><p>Update contact details</p></li>
-<li><p>Customize the introduction</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="customizing-styles">
-<h3>Customizing Styles<a class="headerlink" href="#customizing-styles" title="Link to this heading">#</a></h3>
-<p>Edit <code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code> to modify:</p>
-<ul class="simple">
-<li><p>Colors and themes</p></li>
-<li><p>Fonts and typography</p></li>
-<li><p>Layout and spacing</p></li>
-<li><p>Component styles</p></li>
-</ul>
-</section>
-<section id="adding-a-logo">
-<h3>Adding a Logo<a class="headerlink" href="#adding-a-logo" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p>Add your logo image (e.g., <code class="docutils literal notranslate"><span class="pre">logo.png</span></code>) to the root directory</p></li>
-<li><p>Update <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logo.png</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-</section>
 <section id="project-structure">
 <h2>📂 Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DLPortfolio/
@@ -695,15 +532,6 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <li><p><strong>MyST Markdown</strong>: Enhanced markdown for technical writing</p></li>
 </ul>
 </section>
-<section id="learning-resources">
-<h2>📚 Learning Resources<a class="headerlink" href="#learning-resources" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jupyterbook.org/">Jupyter Book Documentation</a></p></li>
-<li><p><a class="reference external" href="https://www.deeplearningbook.org/">Deep Learning Book</a></p></li>
-<li><p><a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a></p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/pages">GitHub Pages Documentation</a></p></li>
-</ul>
-</section>
 <section id="contributing">
 <h2>🤝 Contributing<a class="headerlink" href="#contributing" title="Link to this heading">#</a></h2>
 <p>This is a personal learning portfolio, but suggestions and feedback are welcome! Feel free to:</p>
@@ -713,21 +541,15 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <li><p>Share your own learning journey</p></li>
 </ul>
 </section>
-<section id="license">
-<h2>📄 License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
-<p>This project is open source and available under the <a class="reference download internal" download="" href="_downloads/9879d6db96fd29134fc802214163b95a/LICENSE"><span class="xref download myst">MIT License</span></a>.</p>
-</section>
 <section id="contact">
 <h2>📧 Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Name</strong>: Your Name</p></li>
-<li><p><strong>Email</strong>: <a class="reference external" href="mailto:your&#46;email&#37;&#52;&#48;example&#46;com">your<span>&#46;</span>email<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
-<li><p><strong>GitHub</strong>: <a class="reference external" href="https://github.com/yourusername">&#64;yourusername</a></p></li>
-<li><p><strong>LinkedIn</strong>: <a class="reference external" href="https://linkedin.com/in/yourprofile">Your LinkedIn</a></p></li>
+<li><p><strong>Name</strong>: Qylle Christian Quiño</p></li>
+<li><p><strong>Email</strong>: <a class="reference external" href="mailto:quinoqylle6&#37;&#52;&#48;gmail&#46;com">quinoqylle6<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+<li><p><strong>GitHub</strong>: <a class="reference external" href="https://github.com/hyunkael">&#64;hyunkael</a></p></li>
 </ul>
-<hr class="docutils" />
-<p><strong>Note</strong>: Remember to update all placeholder information (URLs, names, contact details) with your actual information before publishing!</p>
 </section>
+<hr class="docutils" />
 <section id="continuous-updates">
 <h2>🔄 Continuous Updates<a class="headerlink" href="#continuous-updates" title="Link to this heading">#</a></h2>
 <p>This portfolio is continuously updated as I progress through the Deep Learning course. Check back regularly for new content!</p>
@@ -789,33 +611,9 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-build-files">Cleaning Build Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-portfolio">📖 Viewing the Portfolio</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-github-pages">Online (GitHub Pages)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-development">Local Development</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-to-github-pages">🔄 Publishing to GitHub Pages</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-setup">Initial Setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-updates">Publishing Updates</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-content">📝 Adding New Content</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-lab">Adding a New Lab</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-exercise">Adding a New Exercise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-project">Adding a New Project</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customization">🎨 Customization</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-personal-information">Updating Personal Information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-styles">Customizing Styles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-logo">Adding a Logo</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">📂 Project Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">🛠️ Technologies Used</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-resources">📚 Learning Resources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">🤝 Contributing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">📄 License</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">📧 Contact</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-updates">🔄 Continuous Updates</a></li>
 </ul>

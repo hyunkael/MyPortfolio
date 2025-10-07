@@ -13,6 +13,26 @@ Laboratory activities provide hands-on experience with:
 
 ## Completed Labs
 
+### Laboratory Task 1 - Data Analytics Fundamentals
+Introduction to data analytics types (descriptive, diagnostic, predictive, prescriptive) and their applications in real-world scenarios.
+
+### Laboratory Task 2 - Neural Networks
+Exploration of neural network architectures, activation functions, and basic implementations.
+
+### Laboratory Task 3 - Deep Learning Concepts
+Deep dive into fundamental deep learning concepts including backpropagation, optimization, and training techniques.
+
+### Laboratory Task 4 - Advanced Topics
+Advanced deep learning topics covering specialized architectures and techniques.
+
+### Laboratory Task 5 - Model Optimization
+Techniques for optimizing model performance including hyperparameter tuning and regularization.
+
+### Laboratory Task 6 - Final Project
+Comprehensive project integrating concepts learned throughout the course.
+
+---
+
 ```{tableofcontents}
 ```
 
@@ -29,7 +49,7 @@ Each laboratory activity includes:
 
 ## Learning Outcomes
 
-Through these laboratory activities, I am developing:
+Through these laboratory activities, I have developed:
 
 - ✅ Strong understanding of deep learning fundamentals
 - ✅ Practical coding skills in Python and ML frameworks
@@ -39,4 +59,4 @@ Through these laboratory activities, I am developing:
 
 ---
 
-*This section is continuously updated as new labs are completed.*
+*Last Updated: October 2025*

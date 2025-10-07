@@ -95,7 +95,7 @@ This portfolio is continuously updated as I progress through the course. Each ne
 ```{admonition} Latest Update
 :class: tip
 **Date**: October 2025  
-**Content**: Laboratory Task 1 - Foundational Concepts of Deep Learning and Data Analytics
+**Content**: Completed Laboratory Tasks 1-6 covering foundational concepts through advanced deep learning applications
 ```
 
 ## Get in Touch
