@@ -1,12 +1,26 @@
 # About Me
 
+```{image} mypicture.jpg
+:alt: Qylle Christian Quiño
+:width: 250px
+:align: center
+:class: rounded-circle
+```
+
+<div style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+  <h2>Qylle Christian Quiño</h2>
+  <p><em>BS Data Science Student | Deep Learning Enthusiast</em></p>
+</div>
+
+---
+
 ## Introduction
 
-Hello! I'm a passionate student exploring the exciting field of **Deep Learning** and **Artificial Intelligence**. This portfolio represents my academic journey and hands-on experience in understanding and implementing cutting-edge machine learning techniques.
+Hello! I'm **Qylle Christian Quiño**, a 4th year BS Data Science student at the **University of Science and Technology of Southern Philippines**. I'm passionate about exploring the exciting field of **Deep Learning** and **Artificial Intelligence**. This portfolio represents my academic journey and hands-on experience in understanding and implementing cutting-edge machine learning techniques.
 
-## Background
+## Academic Background
 
-I am currently enrolled in a comprehensive Deep Learning course where I'm gaining both theoretical knowledge and practical skills in:
+I am currently pursuing my Bachelor of Science in Data Science, where I'm gaining both theoretical knowledge and practical skills in:
 
 - Neural network architectures
 - Machine learning algorithms
@@ -40,14 +54,21 @@ Through this course and portfolio, I aim to:
 - **Programming**: Python (Advanced), SQL
 - **ML Frameworks**: TensorFlow, Keras, PyTorch, Scikit-learn
 - **Data Science**: NumPy, Pandas, Matplotlib, Seaborn
+- **Web Development**: HTML, CSS, JavaScript, React
 - **Tools**: Jupyter, Git, GitHub, Google Colab
+- **Hardware**: PC Building & Custom System Assembly
 - **Concepts**: Neural Networks, CNNs, RNNs, Transfer Learning, Model Optimization
 
+### Professional Experience
+- **Ex-Professional Gamer**: Competitive gaming experience with strategic thinking and team coordination
+- **Web Developer**: Building responsive and modern web applications
+- **PC Builder**: Custom computer assembly and hardware optimization
+
 ### Soft Skills
+- Strategic thinking and decision-making (honed through competitive gaming)
 - Analytical thinking and problem-solving
 - Research and documentation
-- Project management
-- Collaborative learning
+- Team collaboration and leadership
 - Technical communication
 
 ## Course Progress
@@ -61,17 +82,23 @@ I'm currently working on foundational concepts in data analytics and their appli
 
 ## Beyond the Classroom
 
-Outside of coursework, I'm interested in:
+Outside of coursework, I'm passionate about:
 
-- 🤖 AI ethics and responsible AI development
-- 🌍 Applications of AI for social good
-- 📖 Reading research papers and staying current with AI trends
-- 💻 Contributing to open-source AI projects
-- 🎓 Mentoring and helping others learn
+- 🎮 **Gaming**: Former professional gamer with competitive experience
+- 💻 **Web Development**: Creating modern, responsive web applications
+- 🖥️ **PC Building**: Custom computer assembly and hardware optimization
+- 🤖 **AI Ethics**: Responsible AI development and ethical considerations
+- 🌍 **AI for Social Good**: Applications of AI to solve real-world problems
+- 📖 **Continuous Learning**: Staying current with AI trends and research papers
+- 🎓 **Knowledge Sharing**: Mentoring and helping others learn
 
 ## Connect With Me
 
 I'm always open to connecting with fellow students, researchers, and professionals in the AI/ML community. Feel free to reach out to discuss projects, collaborate, or just chat about the latest developments in deep learning!
+
+**Email**: quinoqylle6@gmail.com  
+**GitHub**: [@hyunkael](https://github.com/hyunkael)  
+**Portfolio**: [Deep Learning Portfolio](https://hyunkael.github.io/Deep-Learning-Portfolio/)
 
 ---
 

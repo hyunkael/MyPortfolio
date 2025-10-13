@@ -102,6 +102,11 @@ This portfolio is continuously updated as I progress through the course. Each ne
 
 I'm always eager to connect with fellow learners, researchers, and professionals in the field of AI and deep learning. Feel free to explore my work and reach out!
 
+**Qylle Christian Quiño**  
+BS Data Science Student | University of Science and Technology of Southern Philippines  
+📧 Email: quinoqylle6@gmail.com  
+💻 GitHub: [@hyunkael](https://github.com/hyunkael)
+
 ---
 
 ```{tableofcontents}
