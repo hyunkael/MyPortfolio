@@ -9,7 +9,7 @@
 
 ## Overview
 
-Welcome! This portfolio showcases my journey through the fascinating world of **Deep Learning** and **Artificial Intelligence**. Here, you'll find a comprehensive collection of my coursework, including laboratory activities, exercises, and projects that demonstrate my growing expertise in this rapidly evolving field.
+Welcome! This portfolio showcases my journey through the fascinating world of **Deep Learning** and **Artificial Intelligence**. Here, you'll find a comprehensive collection of my coursework, including laboratory activities, blog posts, and projects that demonstrate my growing expertise in this rapidly evolving field.
 
 ::::{grid} 1 1 2 3
 :class-container: text-center
@@ -26,13 +26,13 @@ Hands-on experiments and implementations exploring fundamental and advanced deep
 :::
 
 :::{grid-item-card}
-:link: exercises/index
+:link: blog/index
 :link-type: doc
 :class-header: bg-light
 
-📝 **Exercises**
+📝 **Blog**
 ^^^
-Problem-solving exercises that reinforce theoretical knowledge and practical skills.
+Blog posts sharing insights, reflections, and learnings from my deep learning journey.
 :::
 
 :::{grid-item-card}
@@ -52,7 +52,7 @@ End-to-end projects demonstrating real-world applications of deep learning techn
 This portfolio is organized into several key sections:
 
 - **Laboratory Activities**: Structured experiments covering topics from foundational concepts to advanced neural network architectures
-- **Exercises**: Targeted practice problems that deepen understanding of core principles
+- **Blog**: Personal blog posts sharing insights, reflections, and learnings from my deep learning journey
 - **Projects**: Comprehensive projects that integrate multiple concepts and showcase practical applications
 - **Reflections**: Personal insights and learnings throughout my deep learning journey
 

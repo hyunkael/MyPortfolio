@@ -21,11 +21,11 @@ chapters:
       - file: labs/lab6
         title: Laboratory Task 6 - Final Project
   
-  - file: exercises/index
-    title: Exercises
+  - file: blog/index
+    title: Blog
     sections:
-      - file: exercises/placeholder
-        title: Coming Soon
+      - file: blog/adam-vs-the-world
+        title: Adam vs The World
   
   - file: projects/index
     title: Projects

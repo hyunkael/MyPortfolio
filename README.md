@@ -1,13 +1,13 @@
 # Deep Learning Portfolio
 
-A comprehensive portfolio showcasing my journey through Deep Learning coursework, including laboratory activities, exercises, and projects.
+A comprehensive portfolio showcasing my journey through Deep Learning coursework, including laboratory activities, blog posts, and projects.
 
 ## 📚 About This Portfolio
 
 This Jupyter Book portfolio documents my learning progress in Deep Learning and Artificial Intelligence. It contains:
 
 - **Laboratory Activities**: Hands-on experiments exploring fundamental and advanced deep learning concepts
-- **Exercises**: Problem-solving exercises that reinforce theoretical knowledge
+- **Blog**: Personal blog posts sharing insights, reflections, and learnings
 - **Projects**: End-to-end projects demonstrating real-world applications
 - **Reflections**: Personal insights and learnings throughout the journey
 
@@ -84,7 +84,7 @@ DLPortfolio/
 ├── labs/                   # Laboratory activities
 │   ├── index.md
 │   └── lab1.ipynb
-├── exercises/              # Practice exercises
+├── blog/                   # Blog posts
 │   ├── index.md
 │   └── placeholder.md
 └── projects/               # Major projects

@@ -73,7 +73,7 @@ Through this course and portfolio, I aim to:
 
 ## Course Progress
 
-This portfolio serves as a living document of my progress through the Deep Learning course. As I complete new laboratories, exercises, and projects, they will be added here with full documentation and reflections.
+This portfolio serves as a living document of my progress through the Deep Learning course. As I complete new laboratories, blog posts, and projects, they will be added here with full documentation and reflections.
 
 ```{admonition} Current Focus
 :class: note
