@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Laboratory Task 1: Foundational Concepts of Deep Learning &#8212; Deep Learning Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=84854725" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/lab1';</script>
+    <link rel="canonical" href="https://hyunkael.github.io/Deep-Learning-Portfolio/labs/lab1.html" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Understanding Deep Learning : Lab 2" href="lab2.html" />
+    <link rel="prev" title="Laboratory Activities" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Deep Learning Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About Me</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Laboratory Activities</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Laboratory Task 1 - Data Analytics Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab2.html">Laboratory Task 2 - Neural Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lab3.html">FeedForward Results</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="lab4.html">Define Model</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="lab6.html">Integrating CNN Model</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../blog-posts/index.html">Blog Posts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blog-posts/DL-BlogPost.html">Adam vs. The World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blog-posts/placeholder.html">More Posts Coming Soon</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/placeholder.html">Coming Soon</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reflections.html">Course Reflections</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hyunkael/Deep-Learning-Portfolio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hyunkael/Deep-Learning-Portfolio/edit/main/labs/lab1.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hyunkael/Deep-Learning-Portfolio/issues/new?title=Issue%20on%20page%20%2Flabs/lab1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/labs/lab1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Laboratory Task 1: Foundational Concepts of Deep Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-analytics-introduction">1. Introduction to Data Analytics {#introduction}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-four-types-of-data-analytics-four-types">2. The Four Types of Data Analytics {#four-types}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">2.1 Descriptive Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics">2.2 Diagnostic Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">2.3 Predictive Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">2.4 Prescriptive Analytics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-covid-19-vaccine-deployment-case-study">3. Case Study: COVID-19 Vaccine Deployment {#case-study}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-description">Scenario Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-analytics-questions">Example Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-role-of-ai-and-deep-learning">The Role of AI and Deep Learning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-lab-task">4. Laboratory Task {#lab-task}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-instructions">Task Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics-questions">4.1 Descriptive Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics-questions">4.2 Diagnostic Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics-questions">4.3 Predictive Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics-questions">4.4 Prescriptive Analytics Questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-analysis-visualization">5. Visual Analysis {#visualization}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-and-conclusion-reflection">6. Reflection and Conclusion {#reflection}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-learnings">Key Learnings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-analytics-hierarchy">1. <strong>The Analytics Hierarchy</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-applications">2. <strong>Real-World Applications</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-role-of-deep-learning">3. <strong>The Role of Deep Learning</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-formulation-is-critical">4. <strong>Question Formulation is Critical</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-encountered">Challenges Encountered</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications">Practical Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-references">7. References {#references}</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="laboratory-task-1-foundational-concepts-of-deep-learning">
+<h1>Laboratory Task 1: Foundational Concepts of Deep Learning<a class="headerlink" href="#laboratory-task-1-foundational-concepts-of-deep-learning" title="Link to this heading">#</a></h1>
+<p><strong>Course</strong>: Deep Learning<br />
+<strong>Date</strong>: October 2025<br />
+<strong>Objective</strong>: Understand the four types of data analytics and their applications in real-world scenarios</p>
+<hr class="docutils" />
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#introduction"><span class="xref myst">Introduction to Data Analytics</span></a></p></li>
+<li><p><a class="reference internal" href="#four-types"><span class="xref myst">The Four Types of Data Analytics</span></a></p></li>
+<li><p><a class="reference internal" href="#case-study"><span class="xref myst">Case Study: COVID-19 Vaccine Deployment</span></a></p></li>
+<li><p><a class="reference internal" href="#lab-task"><span class="xref myst">Laboratory Task</span></a></p></li>
+<li><p><a class="reference internal" href="#visualization"><span class="xref myst">Visual Analysis</span></a></p></li>
+<li><p><a class="reference internal" href="#reflection"><span class="xref myst">Reflection and Conclusion</span></a></p></li>
+<li><p><a class="reference internal" href="#references"><span class="xref myst">References</span></a></p></li>
+</ol>
+</section>
+<section id="introduction-to-data-analytics-introduction">
+<h2>1. Introduction to Data Analytics {#introduction}<a class="headerlink" href="#introduction-to-data-analytics-introduction" title="Link to this heading">#</a></h2>
+<p>Data analytics is the field that includes various methods of data exploration. Any kind of information can undergo data analytics to extract insights that can drive improvements. These techniques can uncover trends and metrics that might otherwise be obscured within large datasets. Such insights can then be utilized to optimize processes, enhancing the overall efficiency of a business or system.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Concept</p>
+<p>Data analytics transforms raw data into actionable insights through systematic analysis and interpretation.</p>
+</div>
+<p>There are four types of data analytics, each at their own respective level of value and complexity.</p>
+</section>
+<section id="the-four-types-of-data-analytics-four-types">
+<h2>2. The Four Types of Data Analytics {#four-types}<a class="headerlink" href="#the-four-types-of-data-analytics-four-types" title="Link to this heading">#</a></h2>
+<section id="descriptive-analytics">
+<h3>2.1 Descriptive Analytics<a class="headerlink" href="#descriptive-analytics" title="Link to this heading">#</a></h3>
+<p><strong>Purpose</strong>: Understanding what has happened</p>
+<p>Descriptive analytics focuses on summarizing historical data to understand what has happened over a given period. It uses data aggregation and data mining techniques to provide insights into past performance and trends. By creating reports, dashboards, and scorecards, descriptive analytics helps organizations understand their current status and how they got there. This form of analytics is foundational, as it provides the context and baseline information necessary for more advanced types of analysis.</p>
+<p><strong>Key Techniques</strong>:</p>
+<ul class="simple">
+<li><p>Data aggregation</p></li>
+<li><p>Data mining</p></li>
+<li><p>Reporting and dashboards</p></li>
+<li><p>Statistical summaries</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="diagnostic-analytics">
+<h3>2.2 Diagnostic Analytics<a class="headerlink" href="#diagnostic-analytics" title="Link to this heading">#</a></h3>
+<p><strong>Purpose</strong>: Understanding why something happened</p>
+<p>Diagnostic analytics goes a step further by examining data to determine the causes of past outcomes. It delves into the details of descriptive analytics to uncover why certain events occurred. Techniques such as drill-down, data discovery, data mining, and correlations are used to identify patterns and relationships. This type of analytics helps organizations understand the underlying reasons behind trends and anomalies, providing a deeper insight into the factors influencing their performance.</p>
+<p><strong>Key Techniques</strong>:</p>
+<ul class="simple">
+<li><p>Drill-down analysis</p></li>
+<li><p>Data discovery</p></li>
+<li><p>Correlation analysis</p></li>
+<li><p>Root cause analysis</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="predictive-analytics">
+<h3>2.3 Predictive Analytics<a class="headerlink" href="#predictive-analytics" title="Link to this heading">#</a></h3>
+<p><strong>Purpose</strong>: Understanding what will happen</p>
+<p>Predictive analytics uses statistical models and machine learning algorithms to analyze historical data and make forecasts about future events. By identifying patterns and trends from past data, predictive analytics can estimate the likelihood of future outcomes. This type of analytics is crucial for decision-making, as it allows organizations to anticipate potential challenges and opportunities, helping them to plan and strategize more effectively.</p>
+<p><strong>Key Techniques</strong>:</p>
+<ul class="simple">
+<li><p>Statistical modeling</p></li>
+<li><p>Machine learning algorithms</p></li>
+<li><p>Time series analysis</p></li>
+<li><p>Forecasting</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Deep Learning Connection</p>
+<p>Deep learning primarily operates in the predictive analytics space, using neural networks to identify complex patterns and make accurate predictions.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="prescriptive-analytics">
+<h3>2.4 Prescriptive Analytics<a class="headerlink" href="#prescriptive-analytics" title="Link to this heading">#</a></h3>
+<p><strong>Purpose</strong>: Understanding what should be done</p>
+<p>Prescriptive analytics goes beyond predicting future outcomes by recommending actions to achieve desired results. It uses optimization and simulation algorithms to suggest the best course of action based on the predicted data. Prescriptive analytics takes into account various constraints and objectives, providing specific guidance on how to address potential issues or capitalize on opportunities. This advanced form of analytics supports decision-making by suggesting actions that can help achieve business goals and improve overall performance.</p>
+<p><strong>Key Techniques</strong>:</p>
+<ul class="simple">
+<li><p>Optimization algorithms</p></li>
+<li><p>Simulation modeling</p></li>
+<li><p>Decision analysis</p></li>
+<li><p>Recommendation systems</p></li>
+</ul>
+</section>
+</section>
+<section id="case-study-covid-19-vaccine-deployment-case-study">
+<h2>3. Case Study: COVID-19 Vaccine Deployment {#case-study}<a class="headerlink" href="#case-study-covid-19-vaccine-deployment-case-study" title="Link to this heading">#</a></h2>
+<section id="scenario-description">
+<h3>Scenario Description<a class="headerlink" href="#scenario-description" title="Link to this heading">#</a></h3>
+<p>Dr. Jake is a medical doctor and the CEO of Astro JR, a giant pharmaceutical company in the Philippines. To support the production and use of AstroJR’s COVID-19 vaccine, this company has implemented a number of business intelligence and data analytics tools.</p>
+</section>
+<section id="example-analytics-questions">
+<h3>Example Analytics Questions<a class="headerlink" href="#example-analytics-questions" title="Link to this heading">#</a></h3>
+<p>The following questions demonstrate how each type of analytics can be applied to this scenario:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Analytics Type</p></th>
+<th class="head"><p>Question</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Descriptive</strong></p></td>
+<td><p>How many infected cases since last week?</p></td>
+<td><p>Monitor current situation</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Diagnostic</strong></p></td>
+<td><p>What factors affect the demand of AstroJR’s COVID-19 vaccine?</p></td>
+<td><p>Understand drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Predictive</strong></p></td>
+<td><p>How many deaths next week?</p></td>
+<td><p>Forecast future outcomes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Prescriptive</strong></p></td>
+<td><p>If cases increase next week, how many hospital staff should be present to adequately treat the influx of patients?</p></td>
+<td><p>Recommend actions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="the-role-of-ai-and-deep-learning">
+<h3>The Role of AI and Deep Learning<a class="headerlink" href="#the-role-of-ai-and-deep-learning" title="Link to this heading">#</a></h3>
+<p>To address the key questions identified by the analytics team, historical data on deaths will be crucial. By analyzing this time-series data, the team can leverage statistical modeling techniques to uncover patterns and trends that will enable them to generate accurate forecasts. The inclusion of a time variable in the inquiry makes the use of these statistical models essential, as they are specifically designed to handle and extract insights from data with a temporal component. This predictive modeling process will also introduce the team to the potential applications of Artificial Intelligence (AI) in this domain.</p>
+</section>
+</section>
+<section id="laboratory-task-lab-task">
+<h2>4. Laboratory Task {#lab-task}<a class="headerlink" href="#laboratory-task-lab-task" title="Link to this heading">#</a></h2>
+<section id="task-instructions">
+<h3>Task Instructions<a class="headerlink" href="#task-instructions" title="Link to this heading">#</a></h3>
+<p>From the example scenario above, create additional two inquiries for each type of data analytics.</p>
+</section>
+<hr class="docutils" />
+<section id="descriptive-analytics-questions">
+<h3>4.1 Descriptive Analytics Questions<a class="headerlink" href="#descriptive-analytics-questions" title="Link to this heading">#</a></h3>
+<p><strong>Question 1</strong>: How many COVID-19 vaccines have been distributed and administered in each region during the past month?</p>
+<p><strong>Rationale</strong>: This question helps track the geographical distribution of vaccines, identifying which regions have received adequate supplies and which may need additional support. It provides a clear picture of the current vaccination coverage across different areas.</p>
+<p><strong>Question 2</strong>: What is the average daily production output of AstroJR’s vaccine manufacturing plants in the last quarter?</p>
+<p><strong>Rationale</strong>: Understanding production capacity is essential for planning future supply. This metric helps identify production trends, potential bottlenecks, and whether the company is meeting its manufacturing targets.</p>
+</section>
+<hr class="docutils" />
+<section id="diagnostic-analytics-questions">
+<h3>4.2 Diagnostic Analytics Questions<a class="headerlink" href="#diagnostic-analytics-questions" title="Link to this heading">#</a></h3>
+<p><strong>Question 1</strong>: Why did vaccine distribution in certain regions lag compared to others despite equal supply allocations?</p>
+<p><strong>Rationale</strong>: This question investigates the root causes of distribution inefficiencies. Factors might include logistical challenges, cold chain infrastructure limitations, administrative delays, or local resistance. Understanding these causes enables targeted interventions.</p>
+<p><strong>Question 2</strong>: What caused the sudden spike in demand for vaccines in urban areas compared to rural areas?</p>
+<p><strong>Rationale</strong>: Analyzing demand patterns helps understand population behavior and external factors (e.g., media coverage, outbreak clusters, policy changes) that influence vaccination rates. This insight is crucial for resource allocation and communication strategies.</p>
+</section>
+<hr class="docutils" />
+<section id="predictive-analytics-questions">
+<h3>4.3 Predictive Analytics Questions<a class="headerlink" href="#predictive-analytics-questions" title="Link to this heading">#</a></h3>
+<p><strong>Question 1</strong>: Based on current vaccination rates, how many people will be fully vaccinated in the next three months?</p>
+<p><strong>Rationale</strong>: This forecast helps plan for future vaccine needs, estimate when herd immunity might be achieved, and adjust public health policies accordingly. It also helps in managing expectations and communicating progress to stakeholders.</p>
+<p><strong>Question 2</strong>: If a new COVID-19 variant emerges, what is the projected demand increase for booster shots?</p>
+<p><strong>Rationale</strong>: Scenario-based predictions enable proactive planning. By modeling different scenarios (e.g., new variants, waning immunity), the company can prepare production capacity and distribution networks in advance, avoiding supply shortages.</p>
+</section>
+<hr class="docutils" />
+<section id="prescriptive-analytics-questions">
+<h3>4.4 Prescriptive Analytics Questions<a class="headerlink" href="#prescriptive-analytics-questions" title="Link to this heading">#</a></h3>
+<p><strong>Question 1</strong>: If vaccine demand exceeds supply in a specific region, how should the company optimize logistics to ensure equitable distribution?</p>
+<p><strong>Rationale</strong>: This question requires optimization algorithms to determine the best allocation strategy considering multiple constraints (e.g., population density, vulnerability, existing coverage). It provides actionable recommendations for fair and efficient distribution.</p>
+<p><strong>Question 2</strong>: Given current production capacity, what adjustments should be made to meet the projected global vaccine demand within the next six months?</p>
+<p><strong>Rationale</strong>: This prescriptive question considers multiple factors (production capacity, demand forecasts, resource constraints) to recommend specific actions such as increasing shifts, investing in new equipment, or partnering with other manufacturers.</p>
+</section>
+</section>
+<section id="visual-analysis-visualization">
+<h2>5. Visual Analysis {#visualization}<a class="headerlink" href="#visual-analysis-visualization" title="Link to this heading">#</a></h2>
+<p>To better understand the relationship between the four types of analytics, let’s create a visual representation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import required libraries for visualization</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">FancyBboxPatch</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+
+<span class="c1"># Set style for better-looking plots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-darkgrid&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualization 1: Analytics Types - Value vs Complexity</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Define analytics types and their positions</span>
+<span class="n">analytics_types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Descriptive&#39;</span><span class="p">,</span> <span class="s1">&#39;Diagnostic&#39;</span><span class="p">,</span> <span class="s1">&#39;Predictive&#39;</span><span class="p">,</span> <span class="s1">&#39;Prescriptive&#39;</span><span class="p">]</span>
+<span class="n">complexity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#3498db&#39;</span><span class="p">,</span> <span class="s1">&#39;#2ecc71&#39;</span><span class="p">,</span> <span class="s1">&#39;#f39c12&#39;</span><span class="p">,</span> <span class="s1">&#39;#e74c3c&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create scatter plot with larger markers</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">analytics_types</span><span class="p">,</span> <span class="n">complexity</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">colors</span><span class="p">)):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrows to show progression</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">complexity</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">complexity</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="c1"># Customize plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Complexity&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Business Value&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Data Analytics Types: Complexity vs Business Value&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Add annotations</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s1">&#39;What happened?&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s1">&#39;Why did it happen?&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s1">&#39;What will happen?&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s1">&#39;What should we do?&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Figure 1: The progression of analytics types shows increasing complexity and business value.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deep learning techniques are primarily used in Predictive and Prescriptive analytics.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualization 2: COVID-19 Vaccine Scenario - Analytics Application</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Define the analytics framework</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Descriptive</span><span class="se">\n</span><span class="s1">(What happened?)&#39;</span><span class="p">,</span> <span class="s1">&#39;Diagnostic</span><span class="se">\n</span><span class="s1">(Why?)&#39;</span><span class="p">,</span> 
+              <span class="s1">&#39;Predictive</span><span class="se">\n</span><span class="s1">(What will happen?)&#39;</span><span class="p">,</span> <span class="s1">&#39;Prescriptive</span><span class="se">\n</span><span class="s1">(What to do?)&#39;</span><span class="p">]</span>
+<span class="n">questions_count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># Including original + 2 new questions each</span>
+<span class="n">colors_bar</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#3498db&#39;</span><span class="p">,</span> <span class="s1">&#39;#2ecc71&#39;</span><span class="p">,</span> <span class="s1">&#39;#f39c12&#39;</span><span class="p">,</span> <span class="s1">&#39;#e74c3c&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create bar chart</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">questions_count</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_bar</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Add value labels on bars</span>
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="si">}</span><span class="s1"> questions&#39;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+
+<span class="c1"># Customize plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Questions Formulated&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;COVID-19 Vaccine Scenario: Analytics Questions by Type&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Add a text box with key insight</span>
+<span class="n">textstr</span> <span class="o">=</span> <span class="s1">&#39;Each analytics type provides unique insights</span><span class="se">\n</span><span class="s1">for vaccine deployment optimization&#39;</span>
+<span class="n">props</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="n">textstr</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">props</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Figure 2: Distribution of analytical questions across the four types of analytics.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A comprehensive analytics strategy requires questions from all four categories.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualization 3: Analytics Framework Flow</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define boxes for each analytics type</span>
+<span class="n">boxes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#3498db&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;DESCRIPTIVE&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;Historical data</span><span class="se">\n</span><span class="s1">Reports &amp; dashboards</span><span class="se">\n</span><span class="s1">What happened?&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#2ecc71&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;DIAGNOSTIC&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;Root cause analysis</span><span class="se">\n</span><span class="s1">Correlations</span><span class="se">\n</span><span class="s1">Why did it happen?&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#f39c12&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;PREDICTIVE&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;ML models</span><span class="se">\n</span><span class="s1">Forecasting</span><span class="se">\n</span><span class="s1">What will happen?&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#e74c3c&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;PRESCRIPTIVE&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;Optimization</span><span class="se">\n</span><span class="s1">Recommendations</span><span class="se">\n</span><span class="s1">What should we do?&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Draw boxes</span>
+<span class="k">for</span> <span class="n">box</span> <span class="ow">in</span> <span class="n">boxes</span><span class="p">:</span>
+    <span class="n">fancy_box</span> <span class="o">=</span> <span class="n">FancyBboxPatch</span><span class="p">(</span><span class="n">box</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">],</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">],</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">],</span>
+                                <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round,pad=0.1&quot;</span><span class="p">,</span> 
+                                <span class="n">facecolor</span><span class="o">=</span><span class="n">box</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">],</span> 
+                                <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> 
+                                <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+                                <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">fancy_box</span><span class="p">)</span>
+    
+    <span class="c1"># Add title</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">box</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span>
+            <span class="n">box</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Add description</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">box</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">box</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span>
+            <span class="n">box</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrows showing flow</span>
+<span class="n">arrow_props</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">7.75</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">7.75</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrow_props</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrow_props</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrow_props</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">4.25</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.25</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="n">arrow_props</span><span class="p">)</span>
+
+<span class="c1"># Add central insight box</span>
+<span class="n">insight_box</span> <span class="o">=</span> <span class="n">FancyBboxPatch</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span>
+                             <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round,pad=0.1&quot;</span><span class="p">,</span>
+                             <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#95a5a6&#39;</span><span class="p">,</span>
+                             <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                             <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                             <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">insight_box</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="s1">&#39;ACTIONABLE INSIGHTS&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> 
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;Data-driven decision making&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="s1">&#39;Analytics Framework: From Data to Action&#39;</span><span class="p">,</span> 
+        <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrow to insights</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Figure 3: The analytics framework shows how different types of analytics work together.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All four types contribute to generating actionable insights for decision-making.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection-and-conclusion-reflection">
+<h2>6. Reflection and Conclusion {#reflection}<a class="headerlink" href="#reflection-and-conclusion-reflection" title="Link to this heading">#</a></h2>
+<section id="key-learnings">
+<h3>Key Learnings<a class="headerlink" href="#key-learnings" title="Link to this heading">#</a></h3>
+<p>Through this laboratory task, I have gained several important insights:</p>
+<section id="the-analytics-hierarchy">
+<h4>1. <strong>The Analytics Hierarchy</strong><a class="headerlink" href="#the-analytics-hierarchy" title="Link to this heading">#</a></h4>
+<p>The four types of analytics form a natural progression from simple to complex:</p>
+<ul class="simple">
+<li><p><strong>Descriptive</strong> analytics provides the foundation by answering “what happened?”</p></li>
+<li><p><strong>Diagnostic</strong> analytics builds on this by explaining “why it happened?”</p></li>
+<li><p><strong>Predictive</strong> analytics uses patterns to forecast “what will happen?”</p></li>
+<li><p><strong>Prescriptive</strong> analytics completes the cycle by recommending “what should we do?”</p></li>
+</ul>
+<p>Each level builds upon the previous one, increasing in both complexity and business value.</p>
+</section>
+<section id="real-world-applications">
+<h4>2. <strong>Real-World Applications</strong><a class="headerlink" href="#real-world-applications" title="Link to this heading">#</a></h4>
+<p>The COVID-19 vaccine scenario demonstrated how these analytics types work together in practice. In a real-world crisis:</p>
+<ul class="simple">
+<li><p>We need to <strong>monitor</strong> the current situation (descriptive)</p></li>
+<li><p><strong>Understand</strong> what’s driving changes (diagnostic)</p></li>
+<li><p><strong>Anticipate</strong> future developments (predictive)</p></li>
+<li><p><strong>Optimize</strong> our response (prescriptive)</p></li>
+</ul>
+<p>No single type of analytics is sufficient—comprehensive decision-making requires all four.</p>
+</section>
+<section id="the-role-of-deep-learning">
+<h4>3. <strong>The Role of Deep Learning</strong><a class="headerlink" href="#the-role-of-deep-learning" title="Link to this heading">#</a></h4>
+<p>Deep learning primarily operates in the <strong>predictive analytics</strong> space, but its applications extend to prescriptive analytics when combined with optimization techniques. Neural networks excel at:</p>
+<ul class="simple">
+<li><p>Identifying complex patterns in large datasets</p></li>
+<li><p>Making accurate predictions from historical data</p></li>
+<li><p>Handling non-linear relationships</p></li>
+<li><p>Processing multiple types of data (images, text, time series)</p></li>
+</ul>
+</section>
+<section id="question-formulation-is-critical">
+<h4>4. <strong>Question Formulation is Critical</strong><a class="headerlink" href="#question-formulation-is-critical" title="Link to this heading">#</a></h4>
+<p>One of the most important skills I developed through this exercise is the ability to formulate appropriate questions for each analytics type. The quality of insights we can extract is directly related to the quality of questions we ask.</p>
+</section>
+</section>
+<section id="challenges-encountered">
+<h3>Challenges Encountered<a class="headerlink" href="#challenges-encountered" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Distinguishing Between Analytics Types</strong>: Initially, it was challenging to clearly differentiate between diagnostic and predictive analytics, as both involve analyzing patterns. I learned that diagnostic looks backward to explain causes, while predictive looks forward to forecast outcomes.</p></li>
+<li><p><strong>Formulating Prescriptive Questions</strong>: Prescriptive analytics questions were the most challenging because they require considering multiple constraints and objectives simultaneously. They must be specific enough to be actionable yet flexible enough to account for real-world complexity.</p></li>
+<li><p><strong>Connecting to Deep Learning</strong>: Understanding how these foundational concepts relate to deep learning required thinking about where neural networks fit in the analytics hierarchy and what unique capabilities they bring.</p></li>
+</ol>
+</section>
+<section id="practical-applications">
+<h3>Practical Applications<a class="headerlink" href="#practical-applications" title="Link to this heading">#</a></h3>
+<p>This framework can be applied to numerous domains:</p>
+<ul class="simple">
+<li><p><strong>Healthcare</strong>: Disease prediction, treatment optimization, resource allocation</p></li>
+<li><p><strong>Finance</strong>: Fraud detection, risk assessment, portfolio optimization</p></li>
+<li><p><strong>Retail</strong>: Customer behavior analysis, demand forecasting, inventory management</p></li>
+<li><p><strong>Manufacturing</strong>: Quality control, predictive maintenance, supply chain optimization</p></li>
+<li><p><strong>Transportation</strong>: Traffic prediction, route optimization, autonomous vehicles</p></li>
+</ul>
+</section>
+<section id="looking-ahead">
+<h3>Looking Ahead<a class="headerlink" href="#looking-ahead" title="Link to this heading">#</a></h3>
+<p>This laboratory task has provided a strong foundation for understanding how data analytics and AI work together. Moving forward, I’m excited to:</p>
+<ol class="arabic simple">
+<li><p>Learn the technical details of implementing predictive models using deep learning</p></li>
+<li><p>Explore different neural network architectures and their applications</p></li>
+<li><p>Apply these concepts to real datasets and problems</p></li>
+<li><p>Understand the ethical implications of AI-driven decision-making</p></li>
+</ol>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h3>
+<p>Data analytics forms the foundation of modern AI and deep learning applications. By understanding the four types of analytics—descriptive, diagnostic, predictive, and prescriptive—we can better appreciate how deep learning fits into the broader landscape of data-driven decision-making.</p>
+<p>The COVID-19 vaccine scenario illustrated that effective use of analytics requires:</p>
+<ul class="simple">
+<li><p>Clear problem definition</p></li>
+<li><p>Appropriate question formulation</p></li>
+<li><p>Integration of multiple analytics types</p></li>
+<li><p>Translation of insights into action</p></li>
+</ul>
+<p>As I continue my deep learning journey, I will carry forward these foundational concepts, recognizing that technical skills must be paired with strategic thinking to create truly impactful AI solutions.</p>
+<div class="tip admonition">
+<p class="admonition-title">Personal Insight</p>
+<p>The most powerful insight from this lab is that AI and deep learning are not just about algorithms and code—they’re about asking the right questions and using data to make better decisions that positively impact the world.</p>
+</div>
+</section>
+</section>
+<section id="references-references">
+<h2>7. References {#references}<a class="headerlink" href="#references-references" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Course lecture materials on Data Analytics and Deep Learning Foundations</p></li>
+<li><p>Provost, F., &amp; Fawcett, T. (2013). <em>Data Science for Business</em>. O’Reilly Media.</p></li>
+<li><p>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). <em>Deep Learning</em>. MIT Press.</p></li>
+<li><p>Davenport, T. H., &amp; Harris, J. G. (2007). <em>Competing on Analytics</em>. Harvard Business Press.</p></li>
+<li><p>World Health Organization. (2021). COVID-19 Vaccine Deployment Guidelines.</p></li>
+</ol>
+<hr class="docutils" />
+<p><em>Laboratory Task 1 completed on October 2025</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Laboratory Activities</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lab2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Understanding Deep Learning : Lab 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-data-analytics-introduction">1. Introduction to Data Analytics {#introduction}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-four-types-of-data-analytics-four-types">2. The Four Types of Data Analytics {#four-types}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">2.1 Descriptive Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics">2.2 Diagnostic Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">2.3 Predictive Analytics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">2.4 Prescriptive Analytics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-covid-19-vaccine-deployment-case-study">3. Case Study: COVID-19 Vaccine Deployment {#case-study}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-description">Scenario Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-analytics-questions">Example Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-role-of-ai-and-deep-learning">The Role of AI and Deep Learning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-lab-task">4. Laboratory Task {#lab-task}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-instructions">Task Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics-questions">4.1 Descriptive Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics-questions">4.2 Diagnostic Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics-questions">4.3 Predictive Analytics Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics-questions">4.4 Prescriptive Analytics Questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-analysis-visualization">5. Visual Analysis {#visualization}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-and-conclusion-reflection">6. Reflection and Conclusion {#reflection}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-learnings">Key Learnings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-analytics-hierarchy">1. <strong>The Analytics Hierarchy</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-applications">2. <strong>Real-World Applications</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-role-of-deep-learning">3. <strong>The Role of Deep Learning</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-formulation-is-critical">4. <strong>Question Formulation is Critical</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-encountered">Challenges Encountered</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications">Practical Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-references">7. References {#references}</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Your Name
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
