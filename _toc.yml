@@ -24,8 +24,8 @@ chapters:
   - file: blog/index
     title: Blog
     sections:
-      - file: blog/adam-vs-the-world
-        title: Adam vs The World
+      - file: blog/DL-BlogPost
+        title: Adam vs The World (Notebook)
   
   - file: projects/index
     title: Projects

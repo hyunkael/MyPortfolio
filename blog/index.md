@@ -24,7 +24,7 @@ Blog posts may cover various topics:
 
 ## Blog Posts
 
-Blog posts are available as PDF documents that can be downloaded and read at your convenience.
+Blog posts can also be written directly as Jupyter notebooks to showcase runnable code, rich outputs, and narrative text in one place.
 
 ### Available Blog Posts
 
@@ -32,13 +32,13 @@ Blog posts are available as PDF documents that can be downloaded and read at you
 :gutter: 3
 
 :::{grid-item-card}
-:link: blog/adam-vs-the-world
+:link: blog/DL-BlogPost
 :link-type: doc
 :class-header: bg-light
 
-**Adam vs The World**
+**Adam vs The World (Notebook)**
 ^^^
-A deep dive into optimization algorithms and their applications in deep learning.
+An interactive notebook blog post exploring optimization algorithms with runnable code examples.
 :::
 
 ::::
