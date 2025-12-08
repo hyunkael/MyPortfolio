@@ -23,6 +23,9 @@ Progress report covering neural network basics, first implementations, and early
 ### Week 3 Narrative Report
 Mid-point reflection on deep learning concepts, model optimization techniques, and advanced topic exploration.
 
+### Week 4 Narrative Report
+Advanced model optimization and deployment strategies with focus on production-ready implementations.
+
 ---
 
 ```{tableofcontents}

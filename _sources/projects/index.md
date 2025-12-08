@@ -36,14 +36,18 @@ Projects will span various domains:
 - 🏥 **Healthcare**: Medical image analysis, disease prediction
 - 🌍 **Social Good**: Applications for positive social impact
 
-## Coming Soon
+## Weekly Projects
 
-Major projects will be added as they are completed throughout the course.
+### [Project - Week 1](project-week1.md)
+Foundational deep learning project implementing basic neural network concepts and establishing project workflow.
 
-```{admonition} Exciting Projects Ahead!
-:class: tip
-Check back regularly to see new projects as they are developed and completed.
-```
+### [Project - Week 2](project-week2.md)
+Neural network implementation project focusing on practical applications and model development.
+
+### [Project - Week 3](project-week3.md)
+Advanced architecture project exploring complex models and optimization techniques.
+
+## Future Projects
 
 ---
 
