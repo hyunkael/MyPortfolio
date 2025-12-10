@@ -1,0 +1,157 @@
+/* Custom CSS for Deep Learning Portfolio */
+
+/* Main body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+/* Sidebar styling */
+.bd-sidebar .nav-link {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* Headings */
+h1 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    border-left: 4px solid #0066cc;
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Code blocks */
+pre {
+    background-color: #f5f5f5;
+    border-left: 3px solid #0066cc;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+table thead {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+table th {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Admonitions */
+.admonition {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    border-left: 4px solid #0066cc;
+    background-color: #f8f9fa;
+}
+
+.admonition-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Cards (for grid layouts) */
+.sd-card {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.sd-card-body {
+    padding: 1rem;
+}
+
+/* Notebook cells */
+.jp-Cell {
+    margin: 1rem 0;
+}
+
+.jp-OutputArea {
+    margin-top: 0.5rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #0066cc;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 2rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+}
